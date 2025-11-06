@@ -136,16 +136,21 @@ To improve customer satisfaction, Olist should focus its efforts on logistics. T
    git clone [YOUR_GITHUB_REPO_URL]
    ```
 
-2. Place all 9 `.csv` files from the Olist dataset in the same project directory.
+2. Place all 9 `.csv` files from the Olist dataset in the `dataset/` directory (already structured in this repo).
 
-3. Install the required libraries:
+3. Install the required libraries (including Jupyter to run the notebook):
    ```bash
-   pip install pandas numpy matplotlib seaborn scikit-learn xgboost wordcloud folium
+   pip install pandas numpy matplotlib seaborn scikit-learn xgboost wordcloud folium jupyter nbconvert
    ```
 
-4. Run the Python script:
-   ```bash
-   python Olist_Project_Script.py
-   ```
+4. Run the notebook `ML_Project_Final.ipynb`:
+   - Open interactively:
+     ```bash
+     jupyter notebook ML_Project_Final.ipynb
+     ```
+   - Or execute all cells non-interactively and produce an executed copy:
+     ```bash
+     jupyter nbconvert --to notebook --execute ML_Project_Final.ipynb --output ML_Project_Final_executed.ipynb
+     ```
 
-**Note**: The script may take 20-30 minutes to run due to the SVM training (Phase 6) and hyperparameter tuning (Phase 7).
+**Note**: End-to-end execution may take 20–30 minutes due to model training (especially SVM in Phase 6) and hyperparameter tuning (Phase 7).
